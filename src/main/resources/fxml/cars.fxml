@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dealerhship.Controller">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="240.0" style="-fx-background-color: black;">
+            <children>
+                <VBox prefHeight="117.0" prefWidth="240.0" style="-fx-padding: 24 20 24 20;">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="191.0" text="STAR AUTO" textFill="#c2b7a9">
+                            <font>
+                                <Font name="Bookman Old Style Bold" size="27.0" />
+                            </font>
+                        </Label>
+                        <Label text="DEALERSHIP" textFill="#a39179" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="1387.0" prefWidth="238.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: white;" text="CARS" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="238.0" style="-fx-background-color: black;" text="OPTIONS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="238.0" style="-fx-background-color: black;" text="PRICING" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="1218.0" prefWidth="238.0" />
+                        <VBox prefHeight="116.0" prefWidth="238.0">
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </padding>
+                            <children>
+                                <Label text="STEP 1" />
+                                <HBox prefHeight="94.0" prefWidth="198.0" spacing="4.0">
+                                    <padding>
+                                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+
+        <!-- MAIN CONTENT - build this yourself in SceneBuilder! -->
+        <ScrollPane fitToWidth="true" prefHeight="700.0" prefWidth="813.0" style="-fx-background-color: #f0f0f0;">
+            <content>
+                <VBox spacing="20.0" style="-fx-padding: 28; -fx-background-color: white;">
+                    <children>
+                        <Label text="SELECT YOUR VEHICLE">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Label>
+                        <Label style="-fx-font-size: 13; -fx-text-fill: #888;" text="Choose a vehicle to continue" />
+                        <Label text="SUVS">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="141.0" prefWidth="758.0" spacing="15.0">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/crv.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Honda">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="CR-V">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$33,500" />
+                                        <RadioButton fx:id="CRV" mnemonicParsing="false" onAction="#selectCar" text="SELECT">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="group" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="114.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/rover.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Land Rover">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Range Rover">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$105,000" />
+                                        <RadioButton fx:id="Rover" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/urus.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Lamborghini">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="URUS">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$230,000" />
+                                        <RadioButton fx:id="urus" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Label text="SEDAN">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="146.0" prefWidth="754.0" spacing="15.0">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="137.0" fitWidth="200.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/accord.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Honda">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Accord">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="17.0" prefWidth="93.0" text="\$29000" />
+                                        <RadioButton fx:id="accord" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="115.0" fitWidth="200.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/540.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="BMW">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="540i AWD">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$64,500" />
+                                        <RadioButton fx:id="bmw" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/G90.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Genesis">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="G90">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$87,000" />
+                                        <RadioButton fx:id="g90" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Label text="Trucks &amp; Off-Road">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="145.0" prefWidth="741.0" spacing="15.0">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/truckl.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Ford">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="F-150">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$42,000" />
+                                        <RadioButton fx:id="f150" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="9.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/rubi%20(2).png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Jeep">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Wrangler Rubicon">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$55,000" />
+                                        <RadioButton fx:id="rubi" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="9.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/gwag.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Mercedes-Benz" />
+                                        <Label prefHeight="21.0" prefWidth="97.0" text="G-CLASS">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$140,000" />
+                                        <RadioButton fx:id="gwag" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Label text="Sport">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="148.0" prefWidth="754.0" spacing="15.0">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/sup.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Toyota">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Supra">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$55000" />
+                                        <RadioButton fx:id="supra" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/c8%20(2).png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Chevrolet">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="C8 Z06">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$115,000" />
+                                        <RadioButton fx:id="c8" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="240.0" spacing="8.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+                                    <padding>
+                                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                    </padding>
+                                    <children>
+                                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../com/dealerhship/IMAGES/turbo.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Porsche">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Turbo S">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="\$250,000" />
+                                        <RadioButton fx:id="turbos" mnemonicParsing="false" onAction="#selectCar" text="SELECT" toggleGroup="$group" />
+                                    </children>
+                                </VBox>
+                                <Label text="Label" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#goNext" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: black;" text="Next" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" />
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+
+    </children>
+</HBox>

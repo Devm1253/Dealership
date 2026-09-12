@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dealerhship.Controller">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="240.0" style="-fx-background-color: black;">
+            <children>
+                <VBox prefHeight="117.0" prefWidth="240.0" style="-fx-padding: 24 20 24 20;">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="191.0" text="STAR AUTO" textFill="#c2b7a9">
+                            <font>
+                                <Font name="Bookman Old Style Bold" size="27.0" />
+                            </font>
+                        </Label>
+                        <Label text="DEALERSHIP" textFill="#a39179" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="577.0" prefWidth="240.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="246.0" style="-fx-background-color: black;" text="CARS" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="238.0" style="-fx-background-color: black;" text="OPTIONS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="238.0" style="-fx-background-color: white;" text="PRICING">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="342.0" prefWidth="238.0" />
+                        <VBox prefHeight="116.0" prefWidth="238.0">
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </padding>
+                            <children>
+                                <Label text="STEP 3" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="700.0" prefWidth="813.0" spacing="20.0" style="-fx-background-color: white;">
+            <padding>
+                <Insets left="40.0" right="20.0" top="30.0" />
+            </padding>
+            <children>
+                <Label text="YOUR ESTIMATE">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label fx:id="hbo" text="No Vehicle">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="150.0" spacing="6.0" style="-fx-background-color: #f0e9e9; -fx-border-color: black; -fx-border-radius: 10;">
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                            <children>
+                                <Label text="SUBTOTAL" />
+                                <Label fx:id="total" text="0.00">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="150.0" spacing="6.0" style="-fx-background-color: #f0e9e9; -fx-border-color: black; -fx-border-radius: 10;">
+                            <children>
+                                <Label text="TAX" />
+                                <Label fx:id="tax" text="0.00">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="150.0" spacing="6.0" style="-fx-background-color: #f0e9e9; -fx-border-radius: 10; -fx-border-color: black;">
+                            <children>
+                                <Label text="INTEREST" />
+                                <Label fx:id="apr" text="0.00">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="150.0" spacing="6.0" style="-fx-background-color: #f0e9e9; -fx-border-color: red; -fx-border-radius: 10;">
+                            <children>
+                                <Label text="MONTHLY" />
+                                <Label fx:id="monthly" text="0.00">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="150.0" spacing="6.0" style="-fx-background-color: #f0e9e9; -fx-border-color: black; -fx-border-radius: 10;">
+                            <children>
+                                <Label text="FINAL" />
+                                <Label fx:id="finalprice" text="0.00">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10;" text="Back" />
+                        <Button mnemonicParsing="false" onAction="#reset" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10;" text="Reset" />
+                        <Button mnemonicParsing="false" onAction="#calculate" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="Calculate" textFill="WHITE" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</HBox>
